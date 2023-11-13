@@ -10,15 +10,13 @@ unpredictable_inputs = [
 ]
 some_random_input = unpredictable_inputs.sample
 
-pp some_random_input.class
-
 if some_random_input.class == String
   pp some_random_input.downcase
 elsif some_random_input.class == Time
   days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   now = Time.now
   day_of_week = now.wday
-  pp days_of_week[day_of_week]
+  pp (days_of_week[day_of_week]).downcase
 elsif some_random_input.class == Integer
   if some_random_input % 2 == 0
     pp "#{some_random_input} is even"
@@ -33,6 +31,6 @@ elsif some_random_input.class == TrueClass
   pp "you may pass"
 elsif some_random_input.class == FalseClass
   pp "you may not pass"
-else
-  pp "The input wasn't a string"
+elsif some_random_input.class == Hash
+  pp some_random_input.keys
 end

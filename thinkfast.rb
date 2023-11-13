@@ -25,7 +25,14 @@ elsif some_random_input.class == Integer
   else
     pp "#{some_random_input} is odd"
   end
-elsif
+elsif some_random_input.class == Symbol
+  pp some_random_input.downcase
+elsif some_random_input.class == NilClass
+  pp "no object provided"
+elsif some_random_input.class == TrueClass
+  pp "you may pass"
+elsif some_random_input.class == FalseClass
+  pp "you may not pass"
 else
   pp "The input wasn't a string"
 end
